@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: hsl(230 25% 6.5%);
+  --color-foreground: hsl(210 40% 98%);
+  
+  --color-card: hsla(230, 25%, 10%, 0.4);
+  --color-card-foreground: hsl(210 40% 98%);
+  
+  --color-popover: hsl(230 25% 8%);
+  --color-popover-foreground: hsl(210 40% 98%);
+  
+  --color-primary: hsl(217.2 91.2% 59.8%);
+  --color-primary-foreground: hsl(222.2 47.4% 11.2%);
+  
+  --color-secondary: hsl(220 20% 12%);
+  --color-secondary-foreground: hsl(210 40% 98%);
+  
+  --color-muted: hsl(220 20% 12%);
+  --color-muted-foreground: hsl(215 20.2% 70%);
+  
+  --color-accent: hsla(217, 91%, 60%, 0.15);
+  --color-accent-foreground: hsl(210 40% 98%);
+  
+  --color-destructive: hsl(0 84.2% 60.2%);
+  --color-destructive-foreground: hsl(210 40% 98%);
+  
+  --color-border: hsla(217, 20%, 30%, 0.2);
+  --color-input: hsla(217, 20%, 30%, 0.2);
+  --color-ring: hsl(224.3 76.3% 48%);
+  
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    background-image: 
+      radial-gradient(at 0% 0%, hsla(217, 91%, 60%, 0.07) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, hsla(270, 91%, 60%, 0.07) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, hsla(217, 91%, 60%, 0.05) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, hsla(270, 91%, 60%, 0.05) 0px, transparent 50%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    animation: bg-pulse 20s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes bg-pulse {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
+@layer utilities {
+  .glass {
+    background: hsla(230, 25%, 12%, 0.3);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid hsla(217, 20%, 60%, 0.08);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+  
+  .glass-header {
+    background: hsla(230, 25%, 5%, 0.6);
+    backdrop-filter: blur(24px) saturate(200%);
+    -webkit-backdrop-filter: blur(24px) saturate(200%);
+    border-bottom: 1px solid hsla(217, 20%, 60%, 0.08);
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: hsla(217, 20%, 50%, 0.2);
+    border-radius: 10px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: hsla(217, 20%, 50%, 0.4);
+  }
+}
