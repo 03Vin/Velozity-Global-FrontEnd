@@ -11,6 +11,9 @@ A state-of-the-art, high-performance project management interface featuring **Gl
 
 ### 🔗 [Live Production URL](https://velozity-global-tracker.vercel.app)
 
+### 📈 Performance Audit: **96/100**
+![Lighthouse Performance Score](docs/screenshots/lighthouse.png)
+
 ---
 
 
