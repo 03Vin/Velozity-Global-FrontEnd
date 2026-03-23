@@ -7,7 +7,7 @@
 
 A state-of-the-art, high-performance project management interface featuring **Glassmorphism**, **Custom Drag-and-Drop**, **Virtual Scrolling**, and **Real-time Collaboration Simulation**.
 
-![Premium Kanban Board Overview](/C:/Users/DELL/.gemini/antigravity/brain/247ea5d2-cc3e-4221-ba63-c2db84eef47c/kanban_1774275252046.png)
+![Premium Kanban Board Overview](docs/screenshots/kanban.png)
 
 ### 🔗 [Live Production URL](https://velozity-global-tracker.vercel.app)
 
@@ -73,7 +73,7 @@ By utilizing the native HTML5 Drag and Drop API (`onDragStart`, `onDragOver`, `o
 
 The application is optimized for high-intensity data management environments.
 
-![List View Performance Indicator](/C:/Users/DELL/.gemini/antigravity/brain/247ea5d2-cc3e-4221-ba63-c2db84eef47c/lighthouse_1774275854507.png)
+![List View Performance Indicator](docs/screenshots/lighthouse.png)
 *Figure 2: The List view efficiently manages 500+ concurrent tasks with zero input lag.*
 
 - **Lighthouse Score**: 96 (Verified on production build)
