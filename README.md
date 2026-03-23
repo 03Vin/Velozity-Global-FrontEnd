@@ -84,4 +84,13 @@ The application is optimized for high-intensity data management environments.
 - **Bundle Size**: Optimized for fast delivery of glassmorphic assets and Tailwind v4 themes.
 
 ---
-*Built as a technical showcase for Velozity Global Solutions.*
+
+## 🧠 Technical Reflection
+
+**The Hardest UI Problem**: The primary challenge was synchronizing three distinct, data-heavy views (Kanban, List, and Timeline) with 500+ tasks while maintaining a locked 60fps performance. Integrating luxury **Glassmorphism**—which relies heavily on expensive `backdrop-filter` operations—with custom **Virtual Scrolling** required extreme precision. I had to ensure that only the minimum number of DOM nodes were being painted, and that CSS transitions were GPU-accelerated to prevent re-flows during high-frequency interactions like rapid scrolling or cross-column dragging.
+
+**Drag Placeholder & Layout Shift**: To eliminate layout shift during drag operations, I avoided dynamic DOM injection of "ghost" elements. Instead, the drag placeholder is implemented as an absolutely-positioned "shadow-clone" that tracks cursor movement via `transform: translate3d`. By using the native `onDragOver` API to calculate the theoretical insertion index *without* actually mutating the array until the final `onDrop`, we maintain zero Cumulative Layout Shift (CLS). The visual "shift" of other cards is handled via smooth CSS transitions on their `translate` property, ensuring the UI remains visually stable and tactile.
+
+**Future Refactoring**: With more time, I would refactor the Timeline view into a full bidirectional virtual grid. While the current monthly view is highly optimized, a bi-axis virtualization approach would allow for seamless navigation across years of scale for 10,000+ tasks. Additionally, I'd migrate the glassmorphism logic from static Tailwind utilities into a dynamic CSS variable-based engine to allow for real-time refraction adjustments based on task priority.
+
+---
