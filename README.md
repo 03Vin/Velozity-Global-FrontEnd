@@ -9,13 +9,11 @@ A state-of-the-art, high-performance project management interface featuring **Gl
 
 ![Premium Kanban Board Overview](docs/screenshots/kanban.png)
 
-### 🔗 [Live Production URL](https://velozity-global-tracker.vercel.app)
-
-### 📈 Performance Audit: **96/100**
-![Lighthouse Performance Score](docs/screenshots/lighthouse.png)
-
 ---
 
+### 🔗 [Live Production URL](https://velozity-global-tracker.vercel.app)
+
+---
 
 ## ✨ Features
 
@@ -76,8 +74,6 @@ By utilizing the native HTML5 Drag and Drop API (`onDragStart`, `onDragOver`, `o
 
 The application is optimized for high-intensity data management environments.
 
-![List View Performance Indicator](docs/screenshots/lighthouse.png)
-*Figure 2: The List view efficiently manages 500+ concurrent tasks with zero input lag.*
 
 - **Lighthouse Score**: 96 (Verified on production build)
 - **Animation Smoothness**: 60fps locked (even during heavy DnD operations).
