@@ -74,6 +74,9 @@ By utilizing the native HTML5 Drag and Drop API (`onDragStart`, `onDragOver`, `o
 
 The application is optimized for high-intensity data management environments.
 
+![Lighthouse Performance Audit](docs/screenshots/lighthouse.png)
+*Figure 2: Verified Lighthouse Score of 96 on production build.*
+
 
 - **Lighthouse Score**: 96 (Verified on production build)
 - **Animation Smoothness**: 60fps locked (even during heavy DnD operations).
